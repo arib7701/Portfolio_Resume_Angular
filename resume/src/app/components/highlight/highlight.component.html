@@ -1,0 +1,19 @@
+<!-- start section highlights -->
+<div id="highlights" class="paddsection cf">
+
+  <div class="container">
+    <div class="section-title text-center paddsectionHigh">
+      <h2>Highlights</h2>
+    </div>
+    <owl-carousel [options]="{items: 4, dots: true, nav: false, autoplay: true, loop: true, margin: 20, responsiveClass: true, responsive:{
+      '0':{ items:2,nav:true}, '500':{items:4, nav:false }}}" [items]="highlights" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+      <div class="highlights-block" *ngFor="let highlight of highlights">
+        <div class="highlights-carousel owl-theme">
+          <i class="fa {{highlight.logo}}"></i>
+          <span>{{highlight.title}}</span>
+          <p class="separator">{{highlight.description}}</p>
+        </div>
+      </div>
+    </owl-carousel>
+  </div>
+  <!-- end section highlights -->

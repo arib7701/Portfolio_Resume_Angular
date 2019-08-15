@@ -1,0 +1,44 @@
+<div class="main-content paddsection">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="title">
+          <h4>
+            <blockquote>
+              <img src="../../../assets/images/skills-icon.png" alt="skillsIcon"> SKILLS
+            </blockquote>
+          </h4>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-12 skillsDiv">
+            <div class="skillsTitle">
+              <h4>Language
+              </h4>
+            </div>
+            <div class="row" *ngFor="let skill of skills">
+              <div class="container-main single-main" *ngIf="skill.language">
+                <div class="mb-10">
+                  <span>{{skill.language}} : {{skill.level}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="skillsTitle">
+              <h4>Software
+              </h4>
+            </div>
+            <div class="row" *ngFor="let skill of skills">
+              <div class="container-main single-main" *ngIf="skill.software">
+                <div class="mb-10 stars">
+                  <star-rating starType="icon" labelText="{{skill.software}}" labelPosition="left" [readOnly]="true" staticColor="default"
+                    size="medium" rating="{{skill.level}}"></star-rating>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

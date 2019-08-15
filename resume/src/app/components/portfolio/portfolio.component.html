@@ -1,0 +1,39 @@
+<!-- start section portfolio -->
+<div id="portfolio" class="text-center paddsection">
+
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>My Portfolio</h2>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="portfolio-list">
+          <ul class="navbar-nav" id="portfolio-flters">
+            <li class="filter filter-active" (click)="filter('all')">All</li>
+            <li class="filter" (click)="filter('education')">Education</li>
+            <li class="filter" (click)="filter('research')">Research</li>
+            <li class="filter" (click)="filter('experience')">Experience</li>
+            <li class="filter" (click)="filter('skills')">Skills</li>
+            <li class="filter" (click)="filter('projects')">Projects</li>
+            <li class="filter" (click)="filter('hobbies')">Hobbies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-container">
+      <div class="row">
+        <div *ngFor="let portfolio of portfolios | category: 'tags' : portfolioCategory" class="col-md-4 col-sm-6 portfolio-thumbnail all {{portfolio.tags}}">
+          <img src="assets/images/portfolio/{{portfolio.imgTitle}}.jpeg" alt="{{portfolio.text}}">
+          <a class="popup-img" [routerLink]="['/'+portfolio.route]">
+            <div class="image_overlay"></div>
+            <button class="detailsbtn">{{portfolio.text}}</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section portfolio -->

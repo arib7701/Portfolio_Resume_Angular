@@ -1,0 +1,30 @@
+<div class="main-content paddsection">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="title">
+          <h4>
+            <blockquote>
+              <img src="../../../assets/images/hobbies-icon.png" alt="awardsIcon"> HOBBIES
+            </blockquote>
+          </h4>
+        </div>
+        <div class="row" *ngFor="let hobbie of hobbies">
+          <div class="container-main single-main">
+            <div class="block-main mb-30">
+              <div class="content-main single-post padDiv">
+                <div class="post-meta">
+                  <ul class="mb-0">
+                    <li class="hobbiesTitle">
+                      <img src="{{hobbie.img}}" alt="{{hobbie.title}}"> {{hobbie.title}}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

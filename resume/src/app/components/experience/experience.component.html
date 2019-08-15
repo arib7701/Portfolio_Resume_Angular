@@ -1,0 +1,60 @@
+<div class="main-content paddsection" id="exp">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-md-offset-2 exp">
+                <owl-carousel [options]="{items: 1, dots: true, nav: false, autoplay: true, loop: true, margin: 20, responsiveClass: true, autoplayTimeout:10000, autoplayHoverPause:true}"
+                    [items]="experiences" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                    <div class="row" *ngFor="let experience of experiences?.slice().reverse()">
+                        <div class="container-main single-main">
+                            <div class="block-main mb-30">
+
+                                <div class="content-main single-post padDiv">
+                                    <div class="row ">
+                                        <div class="col-md-6 experience">
+                                            <img src="{{experience.logo}}" alt="{{experience.title}}">
+                                            <h4>
+                                                <a> {{experience.title}}</a>
+                                            </h4>
+                                            <div class="post-meta">
+                                                <ul class="mb-0">
+                                                    <li class="info">Dates:
+                                                        <span>{{experience.start}} - {{experience.end}}</span>
+                                                    </li>
+                                                    <li class="info" *ngIf="experience.company">Company:
+                                                        <span>{{experience.company}}</span>
+                                                    </li>
+                                                    <li class="info" *ngIf="experience.subject">Subject:
+                                                        <span>{{experience.subject}}</span>
+                                                    </li>
+                                                    <li class="info">Location:
+                                                        <span>{{experience.location}}</span>
+                                                    </li>
+                                                    <li class="info" *ngIf="experience.website">Website:
+                                                        <span>
+                                                            <a href="{{experience.url}}" target="_blank">{{experience.website}}</a>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 picture ">
+                                            <img src="{{experience.img}} " alt="{{experience.title}}" class="img-responsive ">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="post-meta">
+                                        <ul *ngFor="let task of experience.tasks | slice:1" class="mb-0">
+                                            <li class="tasks">
+                                                <i class="fa fa-angle-right"></i> {{task}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </owl-carousel>
+            </div>
+        </div>
+    </div>
+</div>

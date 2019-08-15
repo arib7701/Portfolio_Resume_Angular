@@ -1,0 +1,40 @@
+<div class="main-content paddsection">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="row" *ngFor="let research of researchs">
+          <div class="container-main single-main">
+            <div class="block-main mb-30">
+              <div class="content-main single-post padDiv">
+                <div class="title">
+                  <h4>
+                    <blockquote>
+                      <img src="{{research.img}}" alt="researchIcon"> {{research.title}}
+                    </blockquote>
+                  </h4>
+
+                </div>
+                <div class="post-meta">
+                  <ul class="mb-0">
+                    <li class="authors">Authors:</li>
+                    <li *ngFor="let author of research.author | slice:1" class="authors">
+                      <span>{{author}} - </span>
+                    </li>
+                    <br>
+                    <li class="researchMeta">Year:
+                      <span>{{research.year}}</span>
+                    </li>
+                    <li class="researchMeta">Status:
+                      <span>{{research.status}}</span>
+                    </li>
+                  </ul>
+                </div>
+                <p class="mb-30 abstract">{{research.abstract}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

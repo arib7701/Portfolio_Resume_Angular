@@ -1,0 +1,33 @@
+<div class="main-content paddsection">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="title">
+          <h4>
+            <blockquote>
+              <img src="../../../assets/images/volunteers-icon.png" alt="volunteersIcon"> VOLUNTEER
+            </blockquote>
+          </h4>
+        </div>
+        <div *ngIf="!volunteers" class="wip">
+          <img src="../../../assets/images/WIP.png" alt="WorkInProgress">
+        </div>
+        <div class="row" *ngFor="let volunteer of volunteers">
+          <div class="container-main single-main">
+            <div class="block-main mb-30">
+              <div class="content-main single-post padDiv">
+                <div class="post-meta">
+                  <ul class="mb-0">
+                    <li class="hobbiesTitle">
+                      <img src="{{volunteer.img}}" alt="{{volunteer.title}}"> {{volunteer.title}}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

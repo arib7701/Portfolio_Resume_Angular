@@ -1,0 +1,33 @@
+<div class="main-content paddsection">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="title">
+          <h4>
+            <blockquote>
+              <img src="../../../assets/images/projects-icon.png" alt="projectsIcon"> PROJECTS
+            </blockquote>
+          </h4>
+        </div>
+        <div *ngIf="!projects" class="wip">
+          <img src="../../../assets/images/WIP.png" alt="WorkInProgress">
+        </div>
+        <div class="row" *ngFor="let project of projects">
+          <div class="container-main single-main">
+            <div class="block-main mb-30">
+              <div class="content-main single-post padDiv">
+                <div class="post-meta">
+                  <ul class="mb-0">
+                    <li class="hobbiesTitle">
+                      <img src="{{project.img}}" alt="{{project.title}}"> {{project.title}}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

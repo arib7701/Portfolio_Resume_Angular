@@ -328,3 +328,11 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+/resume/database.rules.json
+/resume/firebase.json
+/resume/dist/*
+/resume/functions/environments.ts
+/resume/src/assets/*
+/resume/src/environments/*
+.DS_Store
